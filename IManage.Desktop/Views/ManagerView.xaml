@@ -1,0 +1,66 @@
+﻿<views:MvxWpfView 
+      x:Class="IManage.Views.ManagerView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:views="clr-namespace:MvvmCross.Wpf.Views;assembly=MvvmCross.Wpf"
+      xmlns:userControls="clr-namespace:IManage.UserControls"
+    mc:Ignorable="d" 
+    d:DesignWidth="765"
+    d:DesignHeight="500"
+    Resources="{StaticResource ResourceDictionary}">
+    <DockPanel>
+        <DockPanel.Background>
+            <ImageBrush ImageSource="/IManage;component/Assets/imageReady.jpg"/>
+        </DockPanel.Background>
+        <Border DockPanel.Dock="Top">
+            <userControls:TopHeaderManager/>
+        </Border>
+        <Border DockPanel.Dock="Left">
+            <userControls:LeftNavigationManager/>
+        </Border>
+        <Border DockPanel.Dock="Bottom">
+            <userControls:Footer  Height="66"/>
+        </Border>
+        <!-- Dashboard -->
+        <Border>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="225*"/>
+                </Grid.RowDefinitions>
+                <!-- labels -->
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  Text="ITems to Order" Grid.Column="0" Grid.Row="0" Margin="60,10,60,20"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Notifications" Grid.Column="1" Grid.Row="0" Margin="60,10,60,20"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Employee Activity" Grid.Column="2" Grid.Row="0" Margin="60,10,60,20"/>
+                <!-- data grid-->
+                <DataGrid HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"  AutoGenerateColumns="False" ItemsSource="{Binding ItemsToOrder,ValidatesOnDataErrors=False}" Margin="5  5 5 0" Grid.Row="1" Grid.Column="0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}"/>
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"  AutoGenerateColumns="False" ItemsSource="{Binding Notifications,ValidatesOnDataErrors=False}" Margin="5 5 5 0" Grid.Row="1" Grid.Column="1">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Message" Binding="{Binding Message}"/>
+                        <DataGridTextColumn Header="Resolve" Binding="{Binding IsResolved}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"  AutoGenerateColumns="False" ItemsSource="{Binding Employees,ValidatesOnDataErrors=False}" Margin="5 5 5 0" Grid.Row="1" Grid.Column="2">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                        <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                        <DataGridTextColumn Header="Clocked In" Binding="{Binding IsClocked}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+    </DockPanel>
+</views:MvxWpfView>

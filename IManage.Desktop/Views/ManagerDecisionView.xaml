@@ -1,0 +1,69 @@
+﻿<views:MvxWpfView 
+      x:Class="IManage.Views.ManagerDecisionView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:views="clr-namespace:MvvmCross.Wpf.Views;assembly=MvvmCross.Wpf"
+      xmlns:userControls="clr-namespace:IManage.UserControls"
+      mc:Ignorable="d"
+     d:DesignWidth="765"
+     d:DesignHeight="500"
+    Resources="{StaticResource ResourceDictionary}">
+    <DockPanel>
+        <DockPanel.Background>
+            <ImageBrush ImageSource="/IManage;component/Assets/imageReady.jpg"/>
+        </DockPanel.Background>
+        <Border DockPanel.Dock="Top">
+            <Grid>
+                <Border>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="64*"/>
+                            <ColumnDefinition Width="74*"/>
+                            <ColumnDefinition Width="87*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0">
+                            <Image Source="/IManage;component/Assets/Logo/logo.png" OpacityMask="#FF98CFCA" Height="85"/>
+                        </Border>
+                        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="164" Height="62" Margin="0,13">
+                            <TextBlock Margin="10 10 10 10" TextAlignment="Center" Text="Good Morning"></TextBlock>
+                            <TextBlock Margin="10 0 10 10" TextAlignment="Center" Text="Current Time: 07:30:20"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,40,0,40" Grid.Column="2" HorizontalAlignment="Right" Width="296">
+                            <Button Command="{Binding ManagerChoiceViewModelCommand}" Margin="20 10 10 10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="100" Height="30" VerticalAlignment="Top">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="2 0 6 0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Change View"/>
+                                    <Image Source="/IManage;component/Assets/swaphorizontal.png" Width="25"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Command="{Binding EmployeeViewModelCommand}" Margin="50 10 10 10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="100" Height="30" VerticalAlignment="Top">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="2 0 6 0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Save View"/>
+                                    <Image Source="/IManage;component/Assets/save.png" Width="25"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <Border DockPanel.Dock="Left">
+            <userControls:LeftNavigationEmployee/>
+        </Border>
+        <Border DockPanel.Dock="Bottom">
+            <userControls:Footer  Height="66"/>
+        </Border>
+        <!-- Clocking view-->
+        <Border>
+            <Grid>
+                <StackPanel Margin="50,2,50,24">
+                    <StackPanel Margin="50 30 50 50" Height="223">
+                        <Image Margin="50 0 50 10"  Source="/IManage;component/Assets/clock.png" OpacityMask="#FF98CFCA" Height="145"/>
+                        <Button  Height="32" Width="120" Margin="50 20 50 50" Command="{Binding ClockingPopOutViewModelCommand}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Clock In or Out"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </DockPanel>
+</views:MvxWpfView>

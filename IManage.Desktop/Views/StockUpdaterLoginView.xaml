@@ -1,0 +1,41 @@
+﻿<views:MvxWpfView 
+             x:Class="IManage.Views.StockUpdaterLoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:views="clr-namespace:MvvmCross.Wpf.Views;assembly=MvvmCross.Wpf"
+    xmlns:userControls="clr-namespace:IManage.UserControls"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    mc:Ignorable="d" 
+    d:DesignWidth="765"
+    d:DesignHeight="500"
+    Resources="{StaticResource ResourceDictionary}">
+    <DockPanel>
+        <DockPanel.Background>
+            <ImageBrush ImageSource="/IManage;component/Assets/imageReady.jpg"/>
+        </DockPanel.Background>
+        <Border DockPanel.Dock="Top">
+            <userControls:TopHeader/>
+        </Border>
+        <Border DockPanel.Dock="Left">
+            <userControls:LeftNavigationEmployee/>
+        </Border>
+        <Border DockPanel.Dock="Bottom">
+            <userControls:Footer  Height="66"/>
+        </Border>
+        <!-- login view-->
+        <Border Width="625">
+            <StackPanel>
+                <StackPanel Margin="0 30 0 0 " Height="210">
+                    <Image Margin="0 15 0 0"  Source="/IManage;component/Assets/product.jpg" OpacityMask="#FF98CFCA" Height="97"/>
+                    <PasswordBox x:Name="PasswordBox" controls:TextBoxHelper.Watermark="Pin Code" controls:TextBoxHelper.WatermarkAlignment="Center" controls:TextBoxHelper.ClearTextButton="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="215,30,215,10"/>
+                <TextBlock Text="{Binding Message}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                <Grid Margin="158,5,181,0" Height="56">
+                    <Button CommandParameter="{Binding ElementName=PasswordBox}" Command="{Binding LoginButtonClickCommand}" Background="{StaticResource ForegroundDarkBrush}" Margin="58,10,30,10" Grid.Column="0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center" Content="Login" Height="30"  FontWeight="Bold" FontFamily="Arial Rounded MT Bold"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </DockPanel>
+</views:MvxWpfView>

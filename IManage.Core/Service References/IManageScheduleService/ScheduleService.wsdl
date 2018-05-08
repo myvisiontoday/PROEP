@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ScheduleService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8090/IManageService/Services/ScheduleService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8090/IManageService/Services/ScheduleService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8090/IManageService/Services/ScheduleService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IScheduleService_AddSchedules_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSchedules" />
+  </wsdl:message>
+  <wsdl:message name="IScheduleService_AddSchedules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScheduleService_AddAndUpdateSchedules_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAndUpdateSchedules" />
+  </wsdl:message>
+  <wsdl:message name="IScheduleService_AddAndUpdateSchedules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAndUpdateSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScheduleService_DeleteSchedules_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSchedules" />
+  </wsdl:message>
+  <wsdl:message name="IScheduleService_DeleteSchedules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScheduleService_GetSchedulesWithEmployeePinCodeAndWeekNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchedulesWithEmployeePinCodeAndWeekNumber" />
+  </wsdl:message>
+  <wsdl:message name="IScheduleService_GetSchedulesWithEmployeePinCodeAndWeekNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchedulesWithEmployeePinCodeAndWeekNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScheduleService_GetSchedulesWithGivenWeekNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchedulesWithGivenWeekNumber" />
+  </wsdl:message>
+  <wsdl:message name="IScheduleService_GetSchedulesWithGivenWeekNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchedulesWithGivenWeekNumberResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IScheduleService">
+    <wsdl:operation name="AddSchedules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScheduleService/AddSchedules" message="tns:IScheduleService_AddSchedules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScheduleService/AddSchedulesResponse" message="tns:IScheduleService_AddSchedules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAndUpdateSchedules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScheduleService/AddAndUpdateSchedules" message="tns:IScheduleService_AddAndUpdateSchedules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScheduleService/AddAndUpdateSchedulesResponse" message="tns:IScheduleService_AddAndUpdateSchedules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSchedules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScheduleService/DeleteSchedules" message="tns:IScheduleService_DeleteSchedules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScheduleService/DeleteSchedulesResponse" message="tns:IScheduleService_DeleteSchedules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchedulesWithEmployeePinCodeAndWeekNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScheduleService/GetSchedulesWithEmployeePinCodeAndWeekNumber" message="tns:IScheduleService_GetSchedulesWithEmployeePinCodeAndWeekNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScheduleService/GetSchedulesWithEmployeePinCodeAndWeekNumberResponse" message="tns:IScheduleService_GetSchedulesWithEmployeePinCodeAndWeekNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchedulesWithGivenWeekNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScheduleService/GetSchedulesWithGivenWeekNumber" message="tns:IScheduleService_GetSchedulesWithGivenWeekNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScheduleService/GetSchedulesWithGivenWeekNumberResponse" message="tns:IScheduleService_GetSchedulesWithGivenWeekNumber_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ScheduleService" type="tns:IScheduleService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddSchedules">
+      <soap:operation soapAction="http://tempuri.org/IScheduleService/AddSchedules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAndUpdateSchedules">
+      <soap:operation soapAction="http://tempuri.org/IScheduleService/AddAndUpdateSchedules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSchedules">
+      <soap:operation soapAction="http://tempuri.org/IScheduleService/DeleteSchedules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchedulesWithEmployeePinCodeAndWeekNumber">
+      <soap:operation soapAction="http://tempuri.org/IScheduleService/GetSchedulesWithEmployeePinCodeAndWeekNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchedulesWithGivenWeekNumber">
+      <soap:operation soapAction="http://tempuri.org/IScheduleService/GetSchedulesWithGivenWeekNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ScheduleService">
+    <wsdl:port name="ScheduleService" binding="tns:ScheduleService">
+      <soap:address location="http://localhost:8090/IManageService/Services/ScheduleService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

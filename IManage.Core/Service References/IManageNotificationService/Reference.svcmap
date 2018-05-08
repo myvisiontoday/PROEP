@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aea0c023-8f58-4251-a351-fb000cf9bf1b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8090/IManageService/Services/NotificationService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="dcd3d13b-5f96-412c-94d2-af7e2f08831a" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/NotificationService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="bc0a7d04-a927-4d30-b4fc-33062d4604fe" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/NotificationService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="e80d0900-91dd-47f8-ba54-16f0133d90a3" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/NotificationService/mex" />
+    <MetadataFile FileName="IManageService.BusinessLogic.Domain.xsd" MetadataType="Schema" ID="64a07814-fd7f-4974-98fe-0a811b05fd75" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/NotificationService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

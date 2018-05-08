@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5e2c327d-f617-4fec-95fd-3b58db5c59c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8090/IManageService/Services/ScheduleService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ScheduleService.xsd" MetadataType="Schema" ID="cc14012f-f031-48fe-ba7f-dcd33f8d0dc5" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/ScheduleService?xsd=xsd0" />
+    <MetadataFile FileName="ScheduleService1.xsd" MetadataType="Schema" ID="9d731cc3-25ef-47fd-96a0-7761a85d5d7e" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/ScheduleService?xsd=xsd2" />
+    <MetadataFile FileName="ScheduleService.wsdl" MetadataType="Wsdl" ID="fc760855-f582-4c94-8f9b-adcfc9cf0fd1" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/ScheduleService?wsdl" />
+    <MetadataFile FileName="ScheduleService2.xsd" MetadataType="Schema" ID="153c3a0b-bbd1-4a91-a07d-207cd17fd034" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/ScheduleService?xsd=xsd1" />
+    <MetadataFile FileName="ScheduleService.disco" MetadataType="Disco" ID="390030e1-9fe8-49b1-bb68-b3af4fbe0bd7" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/ScheduleService?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

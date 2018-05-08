@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a956c872-68ff-447e-a20a-b75da2d67e3a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8090/IManageService/Services/EmployeesService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EmployeesService.xsd" MetadataType="Schema" ID="ab54aeb2-ebfc-426f-8f3f-4b2b8f762076" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/EmployeesService?xsd=xsd2" />
+    <MetadataFile FileName="EmployeesService1.xsd" MetadataType="Schema" ID="3b50366d-0248-4724-a450-0bd7ce00ee1f" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/EmployeesService?xsd=xsd0" />
+    <MetadataFile FileName="EmployeeService.wsdl" MetadataType="Wsdl" ID="a8db53df-c64c-4c4b-b9f1-d5e7960a893a" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/EmployeesService?wsdl" />
+    <MetadataFile FileName="EmployeesService2.xsd" MetadataType="Schema" ID="9779c413-fcba-4344-8a63-5330b5fbc641" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/EmployeesService?xsd=xsd1" />
+    <MetadataFile FileName="EmployeesService.disco" MetadataType="Disco" ID="030dc832-d5f3-46b8-b1cd-fbc4257458b4" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/EmployeesService?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

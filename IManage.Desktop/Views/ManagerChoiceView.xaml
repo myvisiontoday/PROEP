@@ -1,0 +1,55 @@
+﻿<views:MvxWpfView 
+      x:Class="IManage.Views.ManagerChoiceView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:views="clr-namespace:MvvmCross.Wpf.Views;assembly=MvvmCross.Wpf"
+      xmlns:userControls="clr-namespace:IManage.UserControls"
+      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+      mc:Ignorable="d"
+      d:DesignHeight="500" d:DesignWidth="765"
+    Resources="{StaticResource ResourceDictionary}">
+    <Border>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/IManage;component/Assets/imageReady.jpg"/>
+            </Grid.Background>
+            <Border Margin="0,0,0,0">
+                <StackPanel>
+                    <Border Height="100" Margin="18,0,0,0" HorizontalAlignment="Left" Width="728">
+                        <Image  Source="/IManage;component/Assets/Logo/logo.png" Height="74" Margin="8,13,575,13"/>
+                    </Border>
+                    <Grid Margin="10" Height="300">
+                        <Border Width="600"
+                                CornerRadius="10"
+                                Margin="72,0,73,24"
+                                HorizontalAlignment="Center" Height="252" VerticalAlignment="Bottom">
+                            <StackPanel Margin="40 40 40 40">
+                                <Label Background="{StaticResource BackgroundVeryLightBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="{StaticResource MenuFontSize}" Content="Select View" HorizontalAlignment="Left" Width="520"/>
+                                <Border Background="{StaticResource BackgroundVeryVeryLightBrush}" Height="143">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <RadioButton IsChecked="{Binding ManagerViewSelected}" Grid.Row="0" Margin="10 20 0 0" Content="Manager View"/>
+                                        <RadioButton IsChecked="{Binding EmployeeViewSelected}" Grid.Column="0" Grid.Row="1" Margin="10 20 0 0" Content="Employee View"/>
+                                        <Button Command="{Binding ManagerOrManagerDecisionViewModelCommand}"  Grid.Row="2" Background="{StaticResource ForegroundDarkBrush}" Margin="20 10 20 10" Content="Save" Grid.Column="0"/>
+                                        <Button Command="{Binding LogInViewModelCommand}" Grid.Row="2" Background="{StaticResource ForegroundDarkBrush}" Margin="20,10,20,10" Content="Cancel" Grid.Column="1"/>
+                                    </Grid>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <userControls:Footer Margin="0,0,4,2" Height="66" VerticalAlignment="Bottom"/>
+        </Grid>
+    </Border>
+</views:MvxWpfView>

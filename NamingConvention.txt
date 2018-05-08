@@ -1,0 +1,17 @@
+Roy Osherove`s naming strategy for unit tests
+
+1. Method naming
+
+[UnitOfWork_StateUnderTest_ExpectedBehavior]
+
+where UnitOfWork = name of the method, StateUnderTest=input parameters, ExpectedBehavior=outcomes of the method
+
+2. Test Class
+
+ClassNameTests
+
+4. Test Project
+
+ProjectName.Tests
+
+

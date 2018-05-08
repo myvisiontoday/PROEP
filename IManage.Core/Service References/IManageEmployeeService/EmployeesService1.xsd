@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8090/IManageService/Services/EmployeesService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" />
+  <xs:element name="SaveEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bsnNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNumber" type="xs:long" />
+        <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="gender" type="q1:Gender" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="jobTitle" type="q2:JobTitle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveEmployeeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="employeePincode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bsnNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNumber" type="xs:long" />
+        <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="gender" type="q3:Gender" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="jobTitle" type="q4:JobTitle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateEmployeeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEmployeeWithGivenPinCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="employeePinCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEmployeeWithGivenPinCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteEmployeeWithGivenPinCodeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeWithGivenPinCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="employeePinCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeWithGivenPinCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="GetEmployeeWithGivenPinCodeResult" nillable="true" type="q5:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEmployees">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEmployeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="GetAllEmployeesResult" nillable="true" type="q6:ArrayOfEmployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsEmployeeClockedIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="employeePinCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsEmployeeClockedInResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsEmployeeClockedInResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

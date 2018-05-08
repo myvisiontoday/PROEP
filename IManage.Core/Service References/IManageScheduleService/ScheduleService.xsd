@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8090/IManageService/Services/ScheduleService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" />
+  <xs:element name="AddSchedules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="schedules" nillable="true" type="q1:ArrayOfSchedule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSchedulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddSchedulesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAndUpdateSchedules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="schedulesTobeAddOrUpdate" nillable="true" type="q2:ArrayOfSchedule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAndUpdateSchedulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddAndUpdateSchedulesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSchedules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="schedulesToBeRemove" nillable="true" type="q3:ArrayOfSchedule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSchedulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSchedulesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchedulesWithEmployeePinCodeAndWeekNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="employeePincode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="weekNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchedulesWithEmployeePinCodeAndWeekNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="GetSchedulesWithEmployeePinCodeAndWeekNumberResult" nillable="true" type="q4:ArrayOfSchedule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchedulesWithGivenWeekNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="weekNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchedulesWithGivenWeekNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IManageService.BusinessLogic.Domain" minOccurs="0" name="GetSchedulesWithGivenWeekNumberResult" nillable="true" type="q5:ArrayOfSchedule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="IManage.UserControls.Footer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignWidth="765"
+             Resources="{StaticResource ResourceDictionary}">
+    <Grid>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Copyright © ZIPHOF 2017. All right reseved." Width="942" Height="40" FontSize="10"/>
+    </Grid>
+</UserControl>

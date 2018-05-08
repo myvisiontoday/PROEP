@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fc5d0886-c239-40d9-94c8-50ee8f4ec152" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8090/IManageService/Services/LoginService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LoginService.xsd" MetadataType="Schema" ID="80f2a199-e50b-4e06-bede-46ce7ca2ce52" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/LoginService?xsd=xsd1" />
+    <MetadataFile FileName="LoginService.wsdl" MetadataType="Wsdl" ID="8504371d-8090-485f-96b8-ab734d59116d" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/LoginService?wsdl" />
+    <MetadataFile FileName="LoginService1.xsd" MetadataType="Schema" ID="1d4e4413-1395-4995-94f2-9d30385bf7c5" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/LoginService?xsd=xsd0" />
+    <MetadataFile FileName="LoginService2.xsd" MetadataType="Schema" ID="19cadb8b-9c25-4560-9b96-b7ce0775d361" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/LoginService?xsd=xsd2" />
+    <MetadataFile FileName="LoginService.disco" MetadataType="Disco" ID="485bf269-5dbf-4c77-887c-225bf7dcde5a" SourceId="1" SourceUrl="http://localhost:8090/IManageService/Services/LoginService?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

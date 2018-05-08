@@ -1,0 +1,70 @@
+﻿<views:MvxWpfView
+    x:Class="IManage.Views.EmployeeRegisterationView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:views="clr-namespace:MvvmCross.Wpf.Views;assembly=MvvmCross.Wpf"
+    xmlns:userControls="clr-namespace:IManage.UserControls"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    mc:Ignorable="d"    
+    d:DesignWidth="765"
+    d:DesignHeight="500"
+    Resources="{StaticResource ResourceDictionary}">
+    <DockPanel>
+        <DockPanel.Background>
+            <ImageBrush ImageSource="/IManage;component/Assets/imageReady.jpg"/>
+        </DockPanel.Background>
+        <Border DockPanel.Dock="Top">
+            <userControls:TopHeaderManager/>
+        </Border>
+        <Border DockPanel.Dock="Left">
+            <userControls:LeftNavigationManager/>
+        </Border>
+        <Border DockPanel.Dock="Bottom">
+            <userControls:Footer  Height="66"/>
+        </Border>
+        <!-- Centre content -->
+        <Border>
+            <Grid>
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <Grid Margin="10,0,266,0" Width="499" Height="308">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="17*"/>
+                                <RowDefinition Height="17*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="35*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Margin="10 0 0 0" Text="Employee Registeration" Grid.Column="0" Grid.Row="0"/>
+                            <TextBlock Margin="10 0 0 0" Text="{Binding Message}" Foreground="{Binding Message,Converter={StaticResource MessageForegroundConverter}}" Grid.Column="0" Grid.Row="1"/>
+                            <TextBox Text="{Binding Employee.FirstName}" Margin="10,2,10,2" controls:TextBoxHelper.Watermark="First Name"   controls:TextBoxHelper.ClearTextButton="True"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
+                            <TextBox Text="{Binding Employee.LastName}" Margin="10,2,10,2" controls:TextBoxHelper.Watermark="Last Name"   controls:TextBoxHelper.ClearTextButton="True"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"/>
+                            <TextBox Text="{Binding Employee.Email}" Margin="10 2 10 2" controls:TextBoxHelper.Watermark="Email"   controls:TextBoxHelper.ClearTextButton="True"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+                            <TextBox Text="{Binding Employee.Address}" Margin="10 2 10 2" controls:TextBoxHelper.Watermark="Address"   controls:TextBoxHelper.ClearTextButton="True"  Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"/>
+                            <TextBox PreviewTextInput="NumberValidationTextbox"  Text="{Binding Employee.PhoneNumber}" Margin="10 2 10 2" controls:TextBoxHelper.Watermark="Phone Number"   controls:TextBoxHelper.ClearTextButton="True"  Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2"/>
+                            <controls:DateTimePicker SelectedDate="{Binding Employee.DateOfBirth}" controls:TextBoxHelper.Watermark="Date of Birth" Margin="10,2,10,2"   Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2"/>
+                            <ComboBox SelectedItem="{Binding Employee.Gender}" ItemsSource="{Binding Genders}" HorizontalContentAlignment="Left" controls:TextBoxHelper.Watermark="Gender" controls:TextBoxHelper.ClearTextButton="True" Margin="10,2,10,2"  Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2"/>
+                            <TextBox PreviewTextInput="NumberValidationTextbox"  Text="{Binding Employee.BsnNumber}" Margin="10 2 10 2" controls:TextBoxHelper.Watermark="BSN Number"   controls:TextBoxHelper.ClearTextButton="True"  Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2"/>
+                            <ComboBox SelectedItem="{Binding Employee.JobTitle}" ItemsSource="{Binding JobTitles}" Margin="10,2,10,2" controls:TextBoxHelper.Watermark="Job Title"   controls:TextBoxHelper.ClearTextButton="True"  Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2"/>
+                            <Button Command="{Binding ClearAllInputFieldsCommand}"  Margin="10 0 10 0" Grid.Column="0" Content="Clear All" Grid.Row="11"/>
+                            <Button Command="{Binding SaveButtonCommand}"  Margin="10 0 10 0 " Grid.Column="1" Content="Save" Grid.Row="11"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </DockPanel>
+</views:MvxWpfView>

@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="IManage.UserControls.LeftNavigationEmployee"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignWidth="200"
+             d:DesignHeight="500"
+             Resources="{StaticResource ResourceDictionary}">
+    <Grid>
+        <Border>
+            <StackPanel>
+                <Button Command="{Binding EmployeeViewModelCommand}" Foreground="WhiteSmoke" Background="{StaticResource BackgroundLighBrush}" Height="30" Margin="10 20 10 0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Clock In or Out"/>
+                <Button  Foreground="WhiteSmoke" Background="{StaticResource BackgroundLighBrush}" Height="30" Margin="10 50 10 0" Command="{Binding StockUpdaterLoginViewModelCommand}" x:Name="PurchaseAndStockBtn" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Content="Stock"/>
+                <Button  Foreground="WhiteSmoke" Background="{StaticResource BackgroundLighBrush}" Height="30" Margin="10 50 10 0" Command="{Binding NotificationSenderLoginViewModelCommand}" x:Name="NotificationBtn" Content="Notification" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                <Button Foreground="WhiteSmoke" Background="{StaticResource BackgroundLighBrush}" Height="30" Margin="10 50 10 20" Command="{Binding ScheduleViewerLoginViewModelCommand}" x:Name="ScheduleBtn" Content="View Schedule" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
